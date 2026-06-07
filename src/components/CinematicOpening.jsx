@@ -55,14 +55,14 @@ export default function CinematicOpening() {
         transition={{ duration: 1.5, delay: 0.2 }}
         className="absolute top-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none select-none text-center"
       >
-        <svg 
-          className="w-5 h-5 text-[#F5E6D3] filter drop-shadow-[0_0_8px_rgba(245,230,211,0.3)]" 
-          fill="currentColor" 
+        <svg
+          className="w-5 h-5 text-[#F5E6D3] filter drop-shadow-[0_0_8px_rgba(245,230,211,0.3)]"
+          fill="currentColor"
           viewBox="0 0 24 24"
         >
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
         </svg>
-        <span className="text-[9px] tracking-[0.6em] text-[#FFFDF8]/50 font-sans uppercase pl-[0.6em]">P &amp; S</span>
+        <span className="text-[9px] tracking-[0.6em] text-[#FFFDF8]/50 font-sans uppercase pl-[0.6em]">N &amp; K</span>
       </motion.div>
 
       {/* Center Cinematic Typewriter Message */}
