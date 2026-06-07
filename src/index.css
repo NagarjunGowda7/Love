@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #234235;
+  --color-secondary: #F5E6D3;
+  --color-accent: #A8A8A8;
+  --color-warm-white: #FFFDF8;
+  
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Montserrat", system-ui, sans-serif;
+}
+
+/* Custom scroll snap and global adjustments */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #234235;
+  color: #FFFDF8;
+  font-family: "Inter", "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Disable default React entry centering alignment */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  border: none;
+  min-height: auto;
+  display: block;
+}
+
+/* Custom premium styles */
+.glass-card {
+  background: rgba(35, 66, 53, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 230, 211, 0.12);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.35);
+}
+
+.glass-card-light {
+  background: rgba(245, 230, 211, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 230, 211, 0.08);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+}
+
+.peacock-pattern {
+  background-color: #234235;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 0 C90 30, 90 75, 60 120 C30 75, 30 30, 60 0 Z M60 30 C72 45, 72 68, 60 90 C48 68, 48 45, 60 30 Z M60 48 C66 58, 66 68, 60 75 C54 68, 54 58, 60 48 Z' fill='none' stroke='%23f5e6d3' stroke-width='0.5' stroke-opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(245, 230, 211, 0.35);
+}
+
+.text-glow-accent {
+  text-shadow: 0 0 8px rgba(168, 168, 168, 0.3);
+}
+
+.cinematic-overlay {
+  background: radial-gradient(circle at center, rgba(35, 66, 53, 0.1) 0%, rgba(15, 30, 24, 0.85) 100%);
+}
+
+.vignette {
+  background: radial-gradient(circle, transparent 50%, rgba(10, 20, 16, 0.75) 100%);
+  pointer-events: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #234235;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 230, 211, 0.18);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 230, 211, 0.35);
+}
+
+/* custom animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1); filter: blur(3px); }
+  50% { opacity: 0.65; transform: scale(1.08); filter: blur(6px); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
